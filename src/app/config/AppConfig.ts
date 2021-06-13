@@ -1,0 +1,1 @@
+export const containerDiv = <Element>document.querySelector("#container");
