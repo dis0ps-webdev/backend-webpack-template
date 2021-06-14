@@ -16,7 +16,13 @@ var config = {
   },
   plugins: [
     //new CopyWebpackPlugin({ patterns: [{ from: "src/public", to: "public" }] }),
-    new NodemonPlugin(),
+    new NodemonPlugin({
+      nodeArgs: ["--inspect"],
+      env: {
+        NODE_ENV: "development",
+      },
+      verbose: true,
+    }),
   ],
   module: {
     rules: [
