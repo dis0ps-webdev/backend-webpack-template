@@ -7,7 +7,7 @@ var config = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
-  entry: "./src/index.ts",
+  entry: "./src/app.ts",
   target: "node",
   externals: [nodeExternalsDev()],
   output: {
@@ -15,12 +15,13 @@ var config = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    //new CopyWebpackPlugin({ patterns: [{ from: "src/public", to: "public" }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: "src/public", to: "public" }] }),
     new NodemonPlugin({
       nodeArgs: ["--inspect"],
       env: {
         NODE_ENV: "development",
       },
+      delay: '5000',
       verbose: true,
     }),
   ],
