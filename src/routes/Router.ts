@@ -41,7 +41,8 @@ export class Router {
     filePath: string
   ) {
     res.statusCode = status;
-    res.setHeader("Content-Type", "text/html");
+    const textType = path.extname(filePath).split(".")[1];
+    res.setHeader("Content-Type", `text/${textType}`);
     fs.readFile(filePath, (error, data) => {
       if (error) {
         console.error(error);
