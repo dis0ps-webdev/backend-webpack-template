@@ -5,7 +5,7 @@
   "scripts": {
     "start:dev": "webpack --watch --mode development",
     "build:dev": "webpack --mode development",
-    "build:prd": "webpack --mode production"
+    "build:prd": "webpack --mode production; docker build -t backend-webpack-output ."
   },
   "author": "",
   "license": "ISC",
@@ -32,11 +32,11 @@
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dis0ps/webpack-template.git"
+    "url": "git+https://github.com/dis0ps/backend-webpack-template.git"
   },
   "bugs": {
-    "url": "https://github.com/dis0ps/webpack-template/issues"
+    "url": "https://github.com/dis0ps/backend-webpack-template/issues"
   },
-  "homepage": "https://github.com/dis0ps/webpack-template#readme",
+  "homepage": "https://github.com/dis0ps/backend-webpack-template#readme",
   "description": ""
 }
