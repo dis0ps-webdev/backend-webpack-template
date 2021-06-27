@@ -28,7 +28,13 @@ export class Router {
   }
 
   private logRequest(req: http.IncomingMessage) {
-    console.log(req.socket.remoteAddress, req.method, req.url);
+    console.log(
+      req.headers["x-forwarded-for"],
+      req.socket.remoteAddress,
+      req.headers["user-agent"],
+      req.method,
+      req.url
+    );
   }
 
   private logResponse(res: http.ServerResponse, filePath: string) {
