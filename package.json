@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start:dev": "lsof -i tcp:3000 | grep node | awk '{system(\"kill -9 \" $2)}'; webpack --watch --mode development",
+    "start:dev": "webpack --watch --mode development",
     "build:dev": "webpack --mode development",
-    "build:prd": "webpack --mode production"
+    "build:prd": "webpack --mode production; docker build -t nodejs-basic ."
   },
   "author": "",
   "license": "ISC",
@@ -32,11 +32,11 @@
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dis0ps/webpack-template.git"
+    "url": "git+https://github.com/dis0ps/backend-webpack-template.git"
   },
   "bugs": {
-    "url": "https://github.com/dis0ps/webpack-template/issues"
+    "url": "https://github.com/dis0ps/backend-webpack-template/issues"
   },
-  "homepage": "https://github.com/dis0ps/webpack-template#readme",
+  "homepage": "https://github.com/dis0ps/backend-webpack-template#readme",
   "description": ""
 }
