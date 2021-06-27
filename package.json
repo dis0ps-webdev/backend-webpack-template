@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start:dev": "lsof -i tcp:3000 | grep node | awk '{system(\"kill -9 \" $2)}'; webpack --watch --mode development",
+    "start:dev": "webpack --watch --mode development",
     "build:dev": "webpack --mode development",
     "build:prd": "webpack --mode production; docker build -t backend-webpack-output ."
   },
