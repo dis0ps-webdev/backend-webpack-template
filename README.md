@@ -2,6 +2,12 @@
 
 This is a backend template for using webpack to transpile Typescript to a backend NodeJS service.  Because this is backend development, we will need a place to run this application.  Docker is used to package an image that can either be run locally, or deployed to the cloud.
 
+This template repo packs quite a bit into a simple web server example:
+
+* Typescript transpiling via webpack/babel for backend Node
+* Docker image build using best practices for Node
+* Google Cloud deployment
+
 ## Requirements
 
 ### Clone and set up the repo
